@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="script.js"></script>
+    <title>HTML & CSS personal Cheatsheet</title>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#topic">Topics</a>
+        <a href="#help">Help</a>
+    </nav>
+    <!-- Main header -->
+    <section>
+        <header>
+            <p>Cheatsheets/Learn HTML & CSS</p>
+            <h1>My HTML & CSS personal Cheatsheet</h1>
+        </header>
+    </section>
+    <!-- Table of contents section-->
+    <section>
+        <article class="contents">
+            <a href="#topic">
+                <h3>Topics</h3>
+            </a>
+            <a href="#tables">
+                <h4>HTML Tables</h4>
+            </a>
+            <a href="#tags">
+                <h4>Other HTML tags</h4>
+            </a>
+            <a href="#spec">
+                <h4>CSS selectors and specificity</h4>
+            </a>
+            <a href="#prop">
+                <h4>Common CSS properties</h4>
+            </a>
+            <a href="#color">
+                <h4>CSS Colors</h4>
+            </a>
+        </article>
+    </section>
+    <!-- Main Content section -->
+    <section class="main-content">
+        <table>
+            <thead>
+                <tr>
+                    <th id="topic">Topic</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="topic" id="tables">HTML tables</td>
+                    <td>In HTML, the
+                        table element has content that is used to represent a two-dimensional table made of rows and
+                        columns.
+                        <div class='make-snippet'>
+                            <table>
+                                <thead class="snippet">
+                                    <tr>
+                                        <th>Table header 1</th>
+                                        <th>Table header 2</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Col 1</td>
+                                        <td>Col 1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="topic" id="tags">
+                        Other HTML tags
+                    </td>
+                    <td>Semantic HTML introduces meaning to the code we write. Before Semantic HTML the elements didn’t
+                        have any
+                        meaning as to what it does or what content goes in it. An element such as
+                        div was used as a general-purpose element to create things from headers to footers to articles.
+                        With
+                        Semantic HTML we were introduced to elements that tell developers and browsers exactly what it
+                        does and
+                        what content should go in it.
+                        <div class="make-snippet">
+                            <!--Non Semantic HTML-->
+                            <div id="footer">
+                                <p>this is a footer</p>
+                            </div>
+
+                            <!--Semantic HTML-->
+                            <footer>
+                                <p>this is a footer</p>
+                            </footer>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="topic" id="spec">CSS selectors and specificity</td>
+                    <td>CSS classes can be reusable and applied to many elements. Class selectors are denoted with a
+                        period .
+                        followed by the class name. CSS ID selectors should be unique and used to style only a single
+                        element.
+                        ID selectors are denoted with a hash sign # followed by the id name.
+                        <div class="make-snippet">
+                            .column {
+                            }
+
+                            /* Selects element with id="first-item" */
+                            #first-item {
+                            }
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="topic">Selector Specificity</td>
+                    <td>Specificity is a ranking system that is used when there are multiple conflicting property values
+                        that
+                        point to the same element. When determining which rule to apply, the selector with the highest
+                        specificity wins out. The most specific selector type is the ID selector, followed by class
+                        selectors,
+                        followed by type selectors. In this example, only color: blue will be implemented as it has an
+                        ID
+                        selector whereas color: red has a type selector.
+                        <div class="make-snippet">
+                            h1#header {
+                            color: blue;
+                            } /* implemented */
+
+                            h1 {
+                            color: red;
+                            } /* Not implemented */
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="topic" id="prop">Common CSS properties</td>
+                    <td>The font-size CSS property is used to set text sizes. Font size values can be many different
+                        units or
+                        types such as pixels.The background-color CSS property controls the background color of
+                        elements.
+                        <div class="make-snippet">
+
+                            font-size: 30px;
+
+                            background-color: blue;
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="topic" id="color">CSS Colors</td>
+                    <td>CSS colors can be represented in hexadecimal (or hex) notation. Hexadecimal digits can represent
+                        sixteen
+                        different values using 0-9 and a-f.
+
+                        Hexadecimal colors are composed of 6 characters–each group of two represents a value between 0
+                        and 255
+                        for red, green, or blue. For example #ff0000 is all red, no green, and no blue.
+
+                        When both characters of all three colors are repeated, hex colors can be abbreviated to only
+                        three
+                        values, so #0000ff could also be represented as #00f.
+
+                        <div class="make-snippet">
+
+                            .midground {
+                            background-color: rgba(0, 255, 0, 0.5);
+                            }
+
+                            .foreground {
+                            background-color: hsla(34, 100%, 50%, 0.1);
+                            }
+
+                            .transparent {
+                            color: transparent;
+                            }
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+<!-- Footer section-->
+<footer>
+    <p id="help">Made with &#x1F525 in Cancun 2023 Jorgedltech </p>
+</footer>
+</html>
